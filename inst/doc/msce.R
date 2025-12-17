@@ -4,7 +4,11 @@ knitr::opts_chunk$set(
   comment = "#>"
 )
 
-## ---- echo=FALSE,fig.align='center', fig.cap='Schematic depiction of the MSCE model.'----
+## ----include = FALSE----------------------------------------------------------
+  library(RcppParallel)
+  RcppParallel::setThreadOptions(numThreads = 2) # nice to CRAN
+
+## ----echo=FALSE,fig.align='center', fig.cap='Schematic depiction of the MSCE model.'----
 knitr::include_graphics('MSCE.jpg',dpi=96)
 
 ## -----------------------------------------------------------------------------
@@ -101,4 +105,7 @@ resultE <- tsce(t,parList)
 lines(6:100,resultE$hazard,type="l",lty=3)
 legend("topleft", legend=c("Smoking", "Quitting", "Non-Smoking"), 
        lty=c(2,3,1),cex=0.8)
+
+## ----include = FALSE----------------------------------------------------------
+  RcppParallel::setThreadOptions(numThreads = "auto")
 

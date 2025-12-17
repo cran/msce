@@ -18,6 +18,10 @@ knitr::opts_chunk$set(
   comment = "#>"
 )
 ```
+```{r, include = FALSE}
+  library(RcppParallel)
+  RcppParallel::setThreadOptions(numThreads = 2) # nice to CRAN
+```
 ## Motivation
 
 The Two-Stage Clonal Expansion Model was invented in the late 70's to explain cancer incidence curves by viewing carcinogenesis as a sequence of stochastic processes like mutations and proliferation of cells [@Moolgavkar1979].
@@ -188,4 +192,7 @@ legend("topleft", legend=c("Smoking", "Quitting", "Non-Smoking"),
        lty=c(2,3,1),cex=0.8)
 ```
 
+```{r, include = FALSE}
+  RcppParallel::setThreadOptions(numThreads = "auto")
+```
 ## References

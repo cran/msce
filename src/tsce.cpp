@@ -222,6 +222,7 @@ public:
 //'        Here, \code{Nnu0} is the product of \eqn{N}{N} and \eqn{\nu_0}{nu0}
 //'        and \eqn{\gamma}{gamma} is defined by
 //'        \eqn{\alpha-\beta}{alpha-beta}.
+//' @return Returns a list. Besides the parameters of the parameterList, it contains two named components: \code{hazard} the exact hazard and \code{lnSurvival} the logarithm of the survival function of the Two-Stage Clonal Expansion Model.
 //' @details
 //' \figure{TSCE.jpg}{Schematic depiction of the TSCE model.
 //'         See the package vignette for details.}

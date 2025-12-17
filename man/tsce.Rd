@@ -36,6 +36,9 @@ Here, \code{Nnu0} is the product of \eqn{N}{N} and \eqn{\nu_0}{nu0}
 and \eqn{\gamma}{gamma} is defined by
 \eqn{\alpha-\beta}{alpha-beta}.}
 }
+\value{
+Returns a list. Besides the parameters of the parameterList, it contains two named components: \code{hazard} the exact hazard and \code{lnSurvival} the logarithm of the survival function of the Two-Stage Clonal Expansion Model.
+}
 \description{
 For piecewise constant parameters \code{tsce(t,parameterList)}
 returns the exact hazard and logarithm of the survival function
